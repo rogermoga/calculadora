@@ -1,0 +1,7 @@
+C:\Users\Roger Moga\source\repos\PooVueling\PooVueling\bin\Debug\PooVueling.exe.config
+C:\Users\Roger Moga\source\repos\PooVueling\PooVueling\bin\Debug\PooVueling.exe
+C:\Users\Roger Moga\source\repos\PooVueling\PooVueling\bin\Debug\PooVueling.pdb
+C:\Users\Roger Moga\source\repos\PooVueling\PooVueling\obj\Debug\PooVueling.csproj.CoreCompileInputs.cache
+C:\Users\Roger Moga\source\repos\PooVueling\PooVueling\obj\Debug\PooVueling.exe
+C:\Users\Roger Moga\source\repos\PooVueling\PooVueling\obj\Debug\PooVueling.pdb
+C:\Users\Roger Moga\source\repos\PooVueling\PooVueling\obj\Debug\PooVueling.csprojResolveAssemblyReference.cache
