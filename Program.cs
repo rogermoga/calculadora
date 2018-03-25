@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace PooVueling
 {
     class Program
     {
+        enum Operacion { Suma, Resta, Multiplicacion, Division };
+
         static void Main(string[] args)
         {
             Icalculadora ICalculadora = new Calculadora();
 
-            int input;
+          
+
+        int input;
             do
             {
                 MuestraMenu();
@@ -29,21 +34,32 @@ namespace PooVueling
 
             void Calcula(int opcion, int value1, int value2)
             {
-                switch (opcion)
+                string strr = (opcion == 5) ? "sortir" : ((Operacion)opcion - 1).ToString();
+                Console.WriteLine(strr);
+
+                Type thisType = ICalculadora.GetType();
+
+                MethodInfo method = thisType.GetMethod(strr);
+                Console.WriteLine("el metodo es: {0}" , method);
+
+                //Esta linea esta mal, no he conseguido usar el metodo ni pasarle los parametros
+                //Console.WriteLine("El resultado es: {0}", method.Invoke(value1, value2);
+
+                switch (strr)
                 {
-                    case 1:
+                    case "Suma":
                         Console.WriteLine("El resultado es: " + ICalculadora.Suma(value1, value2));
                         break;
-                    case 2:
+                    case "Resta":
                         Console.WriteLine("El resultado es: " + ICalculadora.Resta(value1, value2));
                         break;
-                    case 3:
+                    case "Multiplicacion":
                         Console.WriteLine("El resultado es: " + ICalculadora.Multiplicacion(value1, value2));
                         break;
-                    case 4:
+                    case "Division":
                         Console.WriteLine("El resultado es: " + ICalculadora.Division(value1, value2));
                         break;
-                    case 5:
+                    case "sortir":
                         break;
                 }
             }
